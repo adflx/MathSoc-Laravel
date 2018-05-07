@@ -70,9 +70,9 @@
 				 <li class="dropdown">
                   <a class="nav-link"  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Member <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li class="text-center"><a class="nav-link"  href="member.php">Member Dashboard</a></li>
+                    <li class="text-center"><a class="nav-link"  href="{{ url('/memberdashboard') }}">Member Dashboard</a></li>
                     <li class="text-center"><a class="nav-link"  href="member.php?request=new">New Member</a></li>
-                    <li class="text-center"><a class="nav-link"  href="member.php?request=view">Display Member</a></li>
+                    <li class="text-center"><a class="nav-link"  href="{{ url('/memberdisplay') }}">Display Member</a></li>
                     
                   </ul>
                 </li>
@@ -80,9 +80,9 @@
 				 <li class="dropdown">
                   <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Officer <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li class="text-center"><a class="nav-link" href="officer.php">Officer Dashboard</a></li>
+                    <li class="text-center"><a class="nav-link" href="{{ url('/officerdashboard') }}">Officer Dashboard</a></li>
                     
-                    <li class="text-center"><a class="nav-link" href="officer.php?request=view">Display Officer</a></li>
+                    <li class="text-center"><a class="nav-link" href="{{ url('/officerdisplay') }}">Display Officer</a></li>
                     
                   </ul>
                 </li>

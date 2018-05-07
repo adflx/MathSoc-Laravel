@@ -23,3 +23,21 @@ Route::get('/memberdashboard', function () {
         return view('memberdashboard');
     });
 	
+Route::get('/officerdashboard', function () {
+        return view('officerdashboard');
+    });
+	
+Route::get('/officerdisplay', function () {
+        return view('officerdisplay');
+    });
+
+Route::get('/officerdisplay', 'OfficerController@display');
+
+
+Route::get('/memberdisplay', function () {
+        return view('memberdisplay');
+    });
+	
+Route::get('/memberdisplay', 'MemberController@display');
+
+	

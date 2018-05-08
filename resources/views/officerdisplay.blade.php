@@ -22,12 +22,12 @@
 
 	<h3>Display Officer</h3>
 		<div class="row">
-		
+
 		<div class="table-responsive">
 
 <table class="table table-bordered">
 <thead>
-	<tr >	
+	<tr >
 		<th class="text-center" >ID No.</th>
 		<th class="text-center" >Name</th>
 		<th class="text-center" >Position</th>
@@ -38,7 +38,7 @@
 	</tr>
 </thead>
 <tbody>
-@foreach($off as $officer)
+@foreach($officer as $officer)
 
 <tr>
 						<td class="text-center" >{{$officer->studID}}</td>
@@ -48,13 +48,10 @@
 						<td class="text-center" >{{$officer->year}}</td>
 						<td class="text-center" >{{$officer->section}}</td>
 						<td class="text-center" >
-					
-						<a href="{{ url('/officeredit','OfficerController@edit') }}"
-						class="btn btn-info" role="button">
-						Edit
-						</a >
-					
-						 
+					<form action="/officer/edit/{{$officer->studID}}">
+            <button type="submit" name="edit" class="btn btn-info">Edit</button>
+            {{ csrf_field() }}
+          </form>
 						</td>
 				</tr>
 
@@ -62,9 +59,9 @@
 @endforeach
 </tbody>
 </table>
-	
+
 	</div>
-	
+
 	</div>
 		</div>
 		<div class="col-sm-1">

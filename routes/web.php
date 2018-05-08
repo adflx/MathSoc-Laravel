@@ -22,22 +22,22 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/memberdashboard', function () {
         return view('memberdashboard');
     });
-	
-Route::get('/officerdashboard', function () {
-        return view('officerdashboard');
-    });
-	
-Route::get('/officerdisplay', function () {
-        return view('officerdisplay');
-    });
 
-Route::get('/officerdisplay', 'OfficerController@display');
+Route::get('/officer','OfficerController@dashboard');
+
+// Route::get('/officerdisplay', function () {
+//         return view('officerdisplay');
+//     });
+
+Route::get('/officer/display', 'OfficerController@display');
+
+
+Route::get('/officer/edit/{officer}', 'OfficerController@edit');
+//Route::resource('officer', 'OfficerController');
 
 
 Route::get('/memberdisplay', function () {
         return view('memberdisplay');
     });
-	
-Route::get('/memberdisplay', 'MemberController@display');
 
-	
+Route::get('/memberdisplay', 'MemberController@display');

@@ -19,11 +19,11 @@
 	<div class="col-sm-1">
 	</div>
 	<div class="col-sm-10">
-	
+
 	<h3>Home</h3>
 	<ul id="menu" class="list-group">
 		<li><a class="list-group-item" href="{{ url('/memberdashboard') }}"><span class="glyphicon glyphicon-dashboard"></span> Member</a></li>
-		<li><a class="list-group-item" href="{{ url('/officerdashboard') }}"><span class="glyphicon glyphicon-user"></span> Officer</a></li>
+		<li><a class="list-group-item" href="{{ url('/officer') }}"><span class="glyphicon glyphicon-user"></span> Officer</a></li>
 		<li><a class="list-group-item" href="index.php?request=event"><span class="glyphicon glyphicon-list-alt"></span> Event</a></li>
 		<li><a class="list-group-item" href="index.php?request=collection"><span class="glyphicon glyphicon-list-alt"></span> Collection</a></li>
 		<li><a class="list-group-item" href="index.php?request=expense"><span class="glyphicon glyphicon-list-alt"></span> Expense</a></li>

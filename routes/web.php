@@ -32,7 +32,12 @@ Route::get('/officer','OfficerController@dashboard');
 Route::get('/officer/display', 'OfficerController@display');
 
 
-Route::get('/officer/edit/{officer}', 'OfficerController@edit');
+Route::get('/officer/edit/{officer}',
+      ['uses'=>'OfficerController@edit', 'as'=>'officer']);
+
+//Route::post('/officer/edit/{id}', 'OfficerController@edit');
+
+
 //Route::resource('officer', 'OfficerController');
 
 

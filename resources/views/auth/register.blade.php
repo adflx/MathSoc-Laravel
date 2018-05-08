@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
+                        
                         <div class="form-group row">
                             <label for="fname" class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>
 
@@ -24,7 +24,7 @@
                                 @endif
                             </div>
                         </div>
-						
+
                         <div class="form-group row">
                             <label for="lname" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
 
@@ -38,7 +38,7 @@
                                 @endif
                             </div>
                         </div>
-						
+
                         <div class="form-group row">
                             <label for="mi" class="col-md-4 col-form-label text-md-right">{{ __('Middle Initial') }}</label>
 
@@ -52,7 +52,7 @@
                                 @endif
                             </div>
                         </div>
-						
+
                         <div class="form-group row">
                             <label for="course" class="col-md-4 col-form-label text-md-right">{{ __('Course') }}</label>
 
@@ -66,7 +66,7 @@
                                 @endif
                             </div>
                         </div>
-						
+
                         <div class="form-group row">
                             <label for="year" class="col-md-4 col-form-label text-md-right">{{ __('Year') }}</label>
 
@@ -80,7 +80,7 @@
                                 @endif
                             </div>
                         </div>
-						
+
                         <div class="form-group row">
                             <label for="section" class="col-md-4 col-form-label text-md-right">{{ __('Section') }}</label>
 
@@ -94,7 +94,7 @@
                                 @endif
                             </div>
                         </div>
-						
+
                         <div class="form-group row">
                             <label for="position" class="col-md-4 col-form-label text-md-right">{{ __('Position') }}</label>
 
@@ -108,7 +108,7 @@
                                 @endif
                             </div>
                         </div>
-						
+
                         <div class="form-group row">
                             <label for="studID" class="col-md-4 col-form-label text-md-right">{{ __('User ID') }}</label>
 

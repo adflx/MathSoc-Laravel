@@ -48,10 +48,9 @@
 						<td class="text-center" >{{$officer->year}}</td>
 						<td class="text-center" >{{$officer->section}}</td>
 						<td class="text-center" >
-					<form action="/officer/edit/{{$officer}}">
-            <button type="submit" name="edit" class="btn btn-info">Edit</button>
-            {{ csrf_field() }}
-          </form>
+              
+              <a href="{{action('OfficerController@edit',$officer['studID'])}}" class="btn btn-warning">Edit</a>
+
 						</td>
 				</tr>
 

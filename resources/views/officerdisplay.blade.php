@@ -34,7 +34,9 @@
 		<th class="text-center" >Course</th>
 		<th class="text-center" >Year</th>
 		<th class="text-center" >Section</th>
+
 		<th class="text-center" >Action</th>
+
 	</tr>
 </thead>
 <tbody>
@@ -47,11 +49,26 @@
 						<td class="text-center" >{{$officer->course}}</td>
 						<td class="text-center" >{{$officer->year}}</td>
 						<td class="text-center" >{{$officer->section}}</td>
-						<td class="text-center" >
-              
-              <a href="{{action('OfficerController@edit',$officer['studID'])}}" class="btn btn-warning">Edit</a>
+
+            @if(Auth::user()->role === 0 || Auth::user()->studID === $officer->studID)
+
+          	<td class="text-center" >
+
+              <a name="edit" href="{{action('OfficerController@edit',$officer['studID'])}}" class="btn btn-warning">Edit</a>
 
 						</td>
+
+            @else
+            <td class="text-center" >
+
+              <a name="edit" href="{{action('OfficerController@display')}}" class="btn btn-danger">No access</a>
+
+            </td>
+
+
+            @endif
+
+
 				</tr>
 
 

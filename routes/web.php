@@ -23,7 +23,7 @@ Route::get('/memberdashboard', function () {
         return view('memberdashboard');
     });
 
-Route::get('/officer','OfficerController@dashboard');
+//Route::get('/officer','OfficerController@dashboard');
 
 // Route::get('/officerdisplay', function () {
 //         return view('officerdisplay');
@@ -31,18 +31,19 @@ Route::get('/officer','OfficerController@dashboard');
 
 Route::get('/officer/display', 'OfficerController@display');
 
-
-
-
-Route::get('/officer/edit/{officer}',
-      ['uses'=>'OfficerController@edit', 'as'=>'officer']);
-
-Route::post('/officer/edit/{officer}',['uses'=>'OfficerController@update', 'as'=>'officer']);
-
-//Route::post('/officer/edit/{id}', 'OfficerController@edit');
-
+Route::post('/officer/changepassword/','OfficerController@editpass');
 
 Route::resource('officer', 'OfficerController');
+
+
+Route::get('/officer/edit/{officer}',['uses'=>'OfficerController@edit', 'as'=>'officer']);
+
+Route::post('/officer/update/{officer}',['uses'=>'OfficerController@update', 'as'=>'officer']);
+
+Route::post('/officer/edit/{id}', 'OfficerController@edit');
+
+
+
 
 
 Route::get('/memberdisplay', function () {

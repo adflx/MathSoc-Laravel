@@ -28,7 +28,7 @@
 		<li><a class="list-group-item" href="index.php?request=collection"><span class="glyphicon glyphicon-list-alt"></span> Collection</a></li>
 		<li><a class="list-group-item" href="index.php?request=expense"><span class="glyphicon glyphicon-list-alt"></span> Expense</a></li>
 		<li><a class="list-group-item" href="index.php?request=report"><span class="glyphicon glyphicon-list-alt"></span> Report</a></li>
-		<li><a class="list-group-item" href="index.php?request=changepass"><span class="glyphicon glyphicon-list-alt"></span>Change Password</a></li>
+
 	</ul>
 		</div>
 		<div class="col-sm-1">

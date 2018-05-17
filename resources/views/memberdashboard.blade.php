@@ -23,9 +23,12 @@
 	<h3>Member</h3>
 	<ul id="menu" class="list-group">
 
-    
-		<li><a class="list-group-item" href="{{ url('/') }}"><span class="glyphicon glyphicon-dashboard"></span>New Member</a></li>
-		<li><a class="list-group-item" href="{{ url('/memberdisplay') }}"><span class="glyphicon glyphicon-user"></span>Display Member</a></li>
+    @if(Auth::user()->role === 0 || Auth::user()->role === 1 )
+		<li><a class="list-group-item" href="{{ url('/member') }}"><span class="glyphicon glyphicon-dashboard"></span>New Member</a></li>
+		<li><a class="list-group-item" href="{{ url('/member/display') }}"><span class="glyphicon glyphicon-user"></span>Display Member</a></li>
+    @else
+    <li><a class="list-group-item" href="{{ url('/member/display') }}"><span class="glyphicon glyphicon-user"></span>Display Member</a></li>
+    @endif
 	</ul>
 		</div>
 		<div class="col-sm-1">

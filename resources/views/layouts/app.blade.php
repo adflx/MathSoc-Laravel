@@ -50,16 +50,7 @@
 
 
       @auth
-
-       @if (Auth::user()->role === 0)
          @include('layouts.rolea')
-       @elseif (Auth::user()->role === 1)
-         @include('layouts.roleb')
-       @elseif (Auth::user()->role === 2)
-         @include('layouts.rolec')
-       @elseif(Auth::user()->role === 3)
-         @include('layouts.roled')
-       @endif
       @endauth
 
 

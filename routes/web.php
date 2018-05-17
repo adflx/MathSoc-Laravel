@@ -19,10 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/memberdashboard', function () {
-        return view('memberdashboard');
-    });
-
 //Route::get('/officer','OfficerController@dashboard');
 
 // Route::get('/officerdisplay', function () {
@@ -35,7 +31,6 @@ Route::post('/officer/changepassword/','OfficerController@editpass');
 
 Route::resource('officer', 'OfficerController');
 
-
 Route::get('/officer/edit/{officer}',['uses'=>'OfficerController@edit', 'as'=>'officer']);
 
 Route::post('/officer/update/{officer}',['uses'=>'OfficerController@update', 'as'=>'officer']);
@@ -43,11 +38,14 @@ Route::post('/officer/update/{officer}',['uses'=>'OfficerController@update', 'as
 Route::post('/officer/edit/{id}', 'OfficerController@edit');
 
 
+Route::get('/member', 'MemberController@dashboard');
 
+Route::get('/member/display', 'MemberController@display');
 
+Route::get('/member/new', 'MemberController@new');
 
-Route::get('/memberdisplay', function () {
-        return view('memberdisplay');
-    });
+Route::post('/member/add', 'MemberController@add');
 
-Route::get('/memberdisplay', 'MemberController@display');
+Route::get('/member/pay/{id}', 'MemberController@pay');
+
+Route::resource('/member','MemberController');

@@ -28,7 +28,8 @@ class CreateStudentTable extends Migration
 			$table->string('memstat');
 			$table->string('memsy');
             $table->timestamps();
-			$table->string('created_by');
+			$table->string('updated_by');
+      
         });
     }
 

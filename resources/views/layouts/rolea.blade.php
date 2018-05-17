@@ -17,18 +17,19 @@
 				 <li class="dropdown">
                   <a class="nav-link"  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Member <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li class="text-center"><a class="nav-link"  href="{{ url('/memberdashboard') }}">Member Dashboard</a></li>
-                    <li class="text-center"><a class="nav-link"  href="member.php?request=new">New Member</a></li>
-                    <li class="text-center"><a class="nav-link"  href="{{ url('/memberdisplay') }}">Display Member</a></li>
 
-                  </ul>
+										@if(Auth::user()->role === 0 || (Auth::user()->role === 1))
+                    <li class="text-center"><a class="nav-link"  href="{{ url('/member/new') }}">New Member</a></li>
+                    <li class="text-center"><a class="nav-link"  href="{{ url('/member/display') }}">Display Member</a></li>
+										@else
+										<li class="text-center"><a class="nav-link"  href="{{ url('/member/display') }}">Display Member</a></li>
+										@endif
+									</ul>
                 </li>
 
 				 <li class="dropdown">
                   <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Officer <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li class="text-center"><a class="nav-link" href="{{ url('/officer') }}">Officer Dashboard</a></li>
-
                     <li class="text-center"><a class="nav-link" href="{{ url('/officer/display') }}">Display Officer</a></li>
 
                   </ul>
@@ -38,40 +39,49 @@
 				 <li class="dropdown">
                   <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Event <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li class="text-center"><a class="nav-link" href="event.php">Event Dashboard</a></li>
-                    <li class="text-center"><a class="nav-link" href="event.php?request=new">New Event</a></li>
-                    <li class="text-center"><a class="nav-link" href="event.php?request=view">Display Event</a></li>
 
+										@if(Auth::user()->role === 0 || (Auth::user()->role === 1))
+									  <li class="text-center"><a class="nav-link" href="{{ url('/event/new') }}">New Event</a></li>
+                    <li class="text-center"><a class="nav-link" href="{{ url('/event/display') }}">Display Event</a></li>
+										@else
+											<li class="text-center"><a class="nav-link" href="{{ url('/event/display') }}">Display Event</a></li>
+										@endif
                   </ul>
                 </li>
 
                  <li class="dropdown">
                   <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collection <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li class="text-center"><a class="nav-link" href="collection.php">Collection Dashboard</a></li>
-                    <li class="text-center"><a class="nav-link" href="collection.php?request=new">New Collection</a></li>
-                    <li class="text-center"><a class="nav-link" href="collection.php?request=view">Display Collection</a></li>
-
+										@if((Auth::user()->role === 0) || (Auth::user()->role === 3))
+									<li class="text-center"><a class="nav-link" href="{{ url('/collect/new') }}">New Collection</a></li>
+                    <li class="text-center"><a class="nav-link" href="{{ url('/collect/display') }}">Display Collection</a></li>
+										@else
+										<li class="text-center"><a class="nav-link" href="{{ url('/collect/display') }}">Display Collection</a></li>
+										@endif
                   </ul>
                 </li>
 
 				 <li class="dropdown">
                   <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Expense <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li class="text-center"><a class="nav-link" href="expense.php">Expense Dashboard</a></li>
-                    <li class="text-center"><a class="nav-link" href="expense.php?request=new">New Expense</a></li>
-                    <li class="text-center"><a class="nav-link" href="expense.php?request=view">Display Expense</a></li>
-
+										@if((Auth::user()->role === 0) || (Auth::user()->role === 3))
+                    <li class="text-center"><a class="nav-link" href="{{ url('/expense/new')}}">New Expense</a></li>
+                    <li class="text-center"><a class="nav-link" href="{{ url('/expense/view')}}">Display Expense</a></li>
+										@else
+										<li class="text-center"><a class="nav-link" href="{{ url('/expense/view')}}">Display Expense</a></li>
+										@endif
                   </ul>
                 </li>
 
 				 <li class="dropdown">
                   <a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Report<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li class="text-center"><a class="nav-link" href="report.php">Report Dashboard</a></li>
-                    <li class="text-center"><a class="nav-link" href="report.php?request=new">New Report</a></li>
-                    <li class="text-center"><a class="nav-link" href="report.php?request=view">Display Report</a></li>
-
+										@if((Auth::user()->role === 0) || (Auth::user()->role === 1))
+                    <li class="text-center"><a class="nav-link" href="{{ url('/report/new')}}">New Report</a></li>
+                    <li class="text-center"><a class="nav-link" href="{{ url('/report/view')}}">Display Report</a></li>
+										@else
+										<li class="text-center"><a class="nav-link" href="{{ url('/report/view')}}">Display Report</a></li>
+										@endif
                   </ul>
                 </li>
 

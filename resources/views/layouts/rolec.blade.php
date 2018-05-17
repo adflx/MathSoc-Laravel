@@ -17,7 +17,7 @@
 			 <li class="dropdown">
 								<a class="nav-link"  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Member <span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li class="text-center"><a class="nav-link"  href="{{ url('/memberdisplay') }}">Display Member</a></li>
+									<li class="text-center"><a class="nav-link"  href="{{ url('/member/display') }}">Display Member</a></li>
 
 								</ul>
 							</li>
@@ -34,7 +34,7 @@
 			 <li class="dropdown">
 								<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Event <span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li class="text-center"><a class="nav-link" href="event.php?request=view">Display Event</a></li>
+									<li class="text-center"><a class="nav-link" href="{{ url('/event/display') }}">Display Event</a></li>
 
 								</ul>
 							</li>
@@ -42,7 +42,7 @@
 							 <li class="dropdown">
 								<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collection <span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li class="text-center"><a class="nav-link" href="collection.php?request=view">Display Collection</a></li>
+									<li class="text-center"><a class="nav-link" href="{{ url('/collect/display') }}">Display Collection</a></li>
 
 								</ul>
 							</li>
@@ -50,7 +50,7 @@
 			 <li class="dropdown">
 								<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Expense <span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li class="text-center"><a class="nav-link" href="expense.php?request=view">Display Expense</a></li>
+									<li class="text-center"><a class="nav-link" href="{{ url('/expense/display') }}">Display Expense</a></li>
 
 								</ul>
 							</li>
